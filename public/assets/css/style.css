@@ -1,0 +1,56 @@
+
+/* MAIN FIXES */
+
+* {
+    font-size: 16px;
+    margin:0 auto;
+    padding: 0;
+    text-align:center;
+}
+
+.container {
+    width:80%;
+}
+
+
+/* HEADER */
+.pagetitle {
+    width: 100%;
+    height: 100%;
+    background-color: #2F4F4F;
+    color: white;
+}
+
+.logo  {
+    width:257px;
+}
+
+/* BANNER */
+
+.banner {
+    background-image: url("../img/bannerbg-nocorr.jpg");
+    -webkit-background-size: inherit;
+    background-size: 100%;
+    background-repeat: no-repeat ;
+    padding-bottom:281px;
+}
+
+.loginscreen form {
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.loginscreen input {
+    margin:10px auto 10px auto;
+    padding:5px 5px 5px 5px;
+}
+
+.banner img {
+    padding:150px 0px 40px 0;
+}
+
+.loginbutton {
+    width:10%
+}
