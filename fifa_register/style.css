@@ -1,0 +1,109 @@
+*{
+    background: rgba(184, 184, 184, 1);
+}
+/*========================================fonts========================================*/
+@font-face {
+    font-family: 'Quaterback Fight Campus';
+    src: url('fonts/QuaterbackFightCampus.eot');
+    src: url('fonts/QuaterbackFightCampus.eot?#iefix') format('embedded-opentype'),
+    url('fonts/QuaterbackFightCampus.woff') format('woff'),
+    url('fonts/QuaterbackFightCampus.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('fonts/WorkSans-Regular.eot');
+    src: url('fonts/WorkSans-Regular.eot?#iefix') format('embedded-opentype'),
+    url('fonts/WorkSans-Regular.woff') format('woff'),
+    url('fonts/WorkSans-Regular.ttf') format('truetype');
+}
+/*================================================================================*/
+
+/*========================================menu bar========================================*/
+.menu{
+    background: rgba(184, 184, 184, 1);
+}
+
+.menu ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    padding: 3px;
+}
+
+.menu ul li a{
+    display: block;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+}
+
+.menu ul li{
+
+    color: #cccccc;
+    font-size: 15px;
+    margin: 7px;
+    border-radius: 1px;
+    font-family: "Work Sans";
+}
+
+/*================================================================================*/
+
+/*========================================title========================================*/
+.title-bar h2 {
+    font-family: "Work Sans";
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+/*================================================================================*/
+
+/*========================================registration forms========================================*/
+.item{
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+.box{
+    margin-left: 10px;
+    display: inline;
+    flex-direction: row;
+}
+
+#naam{
+    font-family: "Work Sans";
+    font-weight: bold;
+    color: #000;
+}
+
+.message p{
+    text-align: center;
+    font-family: "Work Sans";
+}
+/*================================================================================*/
+
+
+
+
+/*==============================================HERO BANNER==================*/
+
+.hero{
+    display: flex;
+    text-align: center;
+    background: #cccccc;
+}
+
+.hero h1{
+    font-family: contentFont;
+    font-size: 16px;
+    color: #000000;
+}
+
