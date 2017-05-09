@@ -6,7 +6,7 @@
     margin:0 auto;
     padding: 0;
     text-align:center;
-    font-family:DokChampa;
+    font-family:Calibri;
 }
 
 .container {
@@ -49,7 +49,7 @@
 }
 
 .navbar ul {
-    width:36%;
+    width:33%;
     list-style-type: none;
     overflow: hidden;
 }
@@ -62,10 +62,11 @@
     -webkit-background-size: inherit;
     background-size: 100%;
     background-repeat: no-repeat ;
-    padding-bottom:211px;
+    padding-bottom:221px;
 }
 
 .loginscreen input {
+    border:2px solid lightgray;
     margin:10px auto 10px auto;
     padding:5px 5px 5px 5px;
 }
@@ -79,6 +80,8 @@
     display:flex;
     flex-direction:column;
     justify-content:space-between;
+    border:2px solid lightgray;
+    background: rgba(130, 130,130,0.3);
 }
 
 .loginbutton {

@@ -20,8 +20,8 @@
                 <img src="assets/img/banner-logo2.png" alt="">
                 <div class="loginscreen">
                         <form action="Login.php">
-                            <input type="text" id="username" placeholder="Username*" name="username"required>
-                            <input type="password" id="password" placeholder="Password*" name="password"required>
+                            <input type="text" id="username" placeholder="Gebruikersnaam*" name="username"required>
+                            <input type="password" id="password" placeholder="Wachtwoord*" name="password"required>
                             <input class="loginbutton" type="submit" value="Login">
                         </form>
                 </div>
