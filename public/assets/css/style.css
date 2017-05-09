@@ -6,6 +6,7 @@
     margin:0 auto;
     padding: 0;
     text-align:center;
+    font-family:DokChampa;
 }
 
 .container {
@@ -13,17 +14,46 @@
 }
 
 
-/* HEADER */
+/* HEADER HOMEPAGE*/
+
 .pagetitle {
     width: 100%;
     height: 100%;
     background-color: #2F4F4F;
     color: white;
 }
+/* NAVBAR */
 
-.logo  {
-    width:257px;
+.navbar {
+    background-color: #2F4F4F;
 }
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 5px;
+    margin:3px 10px;
+    text-decoration: none;
+    float: left;
+    font-size: 1em;
+}
+
+.navbar a {
+    font-weight:100;
+    letter-spacing:1px;
+}
+
+.navbar a:Hover {
+    color:lightgray;
+}
+
+.navbar ul {
+    width:36%;
+    list-style-type: none;
+    overflow: hidden;
+}
+
 
 /* BANNER */
 
@@ -32,14 +62,7 @@
     -webkit-background-size: inherit;
     background-size: 100%;
     background-repeat: no-repeat ;
-    padding-bottom:281px;
-}
-
-.loginscreen form {
-    width:100%;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
+    padding-bottom:211px;
 }
 
 .loginscreen input {
@@ -49,6 +72,13 @@
 
 .banner img {
     padding:150px 0px 40px 0;
+}
+
+.loginscreen form {
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
 }
 
 .loginbutton {
