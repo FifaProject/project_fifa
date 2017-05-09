@@ -12,9 +12,7 @@
 .container {
     width:80%;
 }
-
-
-/* HEADER HOMEPAGE*/
+/* ======================NAVBAR&PAGETITLE=================================*/
 
 .pagetitle {
     width: 100%;
@@ -22,7 +20,6 @@
     background-color: #2F4F4F;
     color: white;
 }
-/* NAVBAR */
 
 .navbar {
     background-color: #2F4F4F;
@@ -54,9 +51,7 @@
     overflow: hidden;
 }
 
-
-/* BANNER */
-
+/*====================HOMEPAGE================================*/
 .banner {
     background-image: url("../img/bannerbg-nocorr.jpg");
     -webkit-background-size: inherit;
@@ -87,3 +82,36 @@
 .loginbutton {
     width:10%
 }
+
+/*=================ADDTEAMS==========================*/
+
+.addteams-leftcol {
+    width:100%;
+    float: left;
+    padding:10px 0 10px 0;
+    margin:10px 0 10px 0;
+    border:2px solid forestgreen;
+    background-color: rgba(56, 255, 105,0.2);
+}
+
+.addteams-rightcol {
+    width:100%;
+    float: left;
+    padding:10px 0 10px 0;
+    margin:10px 0 10px 0;
+    display: flex;
+    flex-direction:row;
+    justify-content:space-between;
+    border:2px solid forestgreen;
+    background-color: rgba(56, 255, 105,0.2);
+}
+
+#sendteams{
+    padding:8px 5px 8px 5px;
+    border: 2px solid lightslategray;
+}
+
+.addteams form {
+    padding:40px 0 0 0;
+}
+
