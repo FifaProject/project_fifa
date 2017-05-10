@@ -94,13 +94,13 @@
     background-color: rgba(56, 255, 105,0.2);
 }
 
-.addteams-rightcol {
-    width:100%;
+.playercard {
+    width:15%;
     float: left;
     padding:10px 0 10px 0;
-    margin:10px 0 10px 0;
+    margin:10px 11px 10px 9px;
     display: flex;
-    flex-direction:row;
+    flex-direction:column;
     justify-content:space-between;
     border:2px solid forestgreen;
     background-color: rgba(56, 255, 105,0.2);
@@ -111,7 +111,7 @@
     border: 2px solid lightslategray;
 }
 
-.addteams form {
+.playercard form {
     padding:40px 0 0 0;
 }
 
