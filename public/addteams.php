@@ -17,16 +17,16 @@
 
     <div class="addteams">
         <div class="container">
-            <form action="index.php" method="post">
+            <form action="teamhandler.php" method="post">
                 <div class="addteams-leftcol">
                     <div class="leftcol-team">
-                        <label  for="team">Teamnummer: </label><input type="text" id="team">
-                        <label for="poulenumber"> Poulenumber: </label><input type="number">
+                        <label  for="team">Teamnaam: </label><input type="text" id="team" name="team" required>
+                        <label for="poulenummer"> Poulenumber: </label><input type="number" id="poulenumber" name="poulenumber" required>
                     </div>
                 </div>
                 <div class="playercard">
                     <h2>Speler 1</h2>
-                    <label for="speler1_id">Studentnummer : </label><input type="text" id="speler1_id">
+                    <label for="speler1_id">Studentnummer : </label><input type="text" id="speler1_id" name="speler1_id">
                     <label for="speler1_fname">Voornaam : </label><input type="text" id="speler1_fname">
                     <label for="speler1_lname">Achternaam : </label><input type="text" id="speler1_lname">
                 </div>
