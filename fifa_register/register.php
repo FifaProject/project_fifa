@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+<head>
 <link>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -28,38 +29,20 @@
 </div>
 <div class="message">
     <?php
-    session_start();
-    if (isset($_SESSION['error']))
-    {
-        echo '<p>' . $_SESSION['error'] . '</p>';
-        unset($_SESSION['error']);
-    }
-    if (isset($_SESSION['accountCreated']))
-    {
-        echo '<p>' . $_SESSION['accountCreated'] . '<p>';
-        unset($_SESSION['accountCreated']);
-    }
-    if (isset($_SESSION['invalidPassword']))
-    {
-        echo '<p>' . $_SESSION['invalidPassword'] . '<p>';
-        unset($_SESSION['invalidPassword']);
-    }
-    if (isset($_SESSION['isEmpty']))
-    {
-        echo '<p>' . $_SESSION['isEmpty'] . '<p>';
-        unset($_SESSION['isEmpty']);
-    }
-    if (isset($_SESSION['noPost']))
-    {
-        echo '<p>' . $_SESSION['noPost'] . '<p>';
-        unset($_SESSION['noPost']);
-    }
+    require_once('back-end/register-handler.php');
+
+if (isset($_GET['message']))
+{
+    echo '<p>' . $_GET['message'] . '</p>';
+    unset($_GET['message']);
+
+}
     ?>
 </div>
 
 <div class="wrapper">
     <div class="input">
-        <form action="back-end/registrator.php" method="post"
+        <form action="back-end/register-handler.php" method="post">
 
              <div class="item">
                  <label id="naam" for="username">Gebru. naam</label>
