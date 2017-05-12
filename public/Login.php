@@ -7,12 +7,12 @@
     $sql = "SELECT * FROM `tbl_users` WHERE `username` = '$username' && `password` = '$password'";
 
     if($database->query($sql)->rowCount() == 1) {
-    session_start();
-    $_SESSION['username'] = $username;
-    $_SESSION['password'] = $password;
-    header('location: HomePage');
+        session_start();
+        $_SESSION['username'] = $username;
+        $_SESSION['password'] = $password;
+        header('location: index');
     }
     else {
-    header('location: index');
+        header('location: index');
     }
 ?>
