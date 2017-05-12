@@ -9,6 +9,7 @@ session_start();
 
 
 
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
     $username = $_POST['username'];
@@ -18,7 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     $result = $database->query($select)->rowCount();
         if (($_POST['username'] != "") && ($_POST['password'] != ""))
         {
-            if ($result != 1) {
+            if ($result != 1)
+            {
                 if (preg_match("#.*^(?=.{8,20})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).*$#", $password)) {
 
                     $accountCreated = "Account created";
