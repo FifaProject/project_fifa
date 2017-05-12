@@ -94,6 +94,22 @@
     background-color: rgba(56, 255, 105,0.2);
 }
 
+.playercards-toprow {
+    width:100%;
+    display: flex;
+    flex-direction:row;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.playercards-bottomrow {
+    width:100%;
+    display: flex;
+    flex-direction:row;
+    overflow: hidden;
+    justify-content:center;
+}
+
 .playercard {
     width:15%;
     float: left;
