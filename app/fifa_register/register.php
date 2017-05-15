@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -36,8 +36,6 @@
 if (isset($_GET['message']))
 {
     echo '<p>' . $_GET['message'] . '</p>';
-    unset($_GET['message']);
-
 }
     ?>
 </div>
@@ -47,17 +45,24 @@ if (isset($_GET['message']))
         <form action="back-end/register-handler.php" method="post">
 
              <div class="item">
-                 <label id="naam" for="username">Gebru. naam</label>
+                 <label id="naam" for="username"><h3>Gebru. naam:</label></h3>
                  <div class="box">
-                <input type="text" name="username" id="username"  >
+                <input type="text" name="username" id="username">
                  </div>
              </div>
              <div class="item">
-                <label id="naam" for="password">  Wachtwoord   </label>
+                 <label id="naam" for="password"><h3>Wachtwoord:</label></h3>
                  <div class="box">
-                <input type="password" name="password" id="password" >
+                <input type="password" name="password" id="password">
                  </div>
              </div>
+            <div class="item">
+                <label id="naam" for="password-confirm"><h3>Wachtwoord bevestigen:</label></h3>
+                <div class="box">
+                    <input type="password" name="password-confirm" id="password-confirm">
+                </div>
+            </div>
+
              <div class="item">
                 <input type="submit" name="send" value="versturen">
              </div>
