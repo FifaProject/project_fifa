@@ -10,12 +10,12 @@ $accountCreated = "Account aangemaakt";
 
 
 
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
     $username = $_POST['username'];
     $password = $_POST['password'];
     $passwordCheck = $_POST['password-confirm'];
+
 
     $select = ("SELECT * FROM `tbl_user` WHERE `username` = '$username'");
     $result = $database->query($select)->rowCount();
@@ -30,27 +30,32 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
                             $password = hash('ripemd160', $password);
                             $sql = "INSERT INTO `tbl_user` (`user_id`, `username`, `password`) VALUES (NULL, '$username', '$password')";
                             $database->query($sql);
+
                             header("Location: ../register.php?message=$accountCreated");
                         }else
                             {
+
                                 header("Location: ../register.php?message=$checkPw");
                             }
-                    } else
+                    }else
                         {
+
                             header("Location: ../register.php?message=$invalidPassword");
                         }
             }else
                 {
+
                     header("Location: ../register.php?message=$inUse");
                 }
         }else
             {
+
                 header("Location: ../register.php?message=$isEmpty");
 
             }
 }else
     {
-        $_GET['fatalError'] = $fatalError;
-        //header("Location: ../register.php?message=$fatalError");
+
+        //header("Location: ../register.php=$fatalError");
     }
 

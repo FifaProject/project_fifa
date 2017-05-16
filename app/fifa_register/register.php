@@ -31,11 +31,12 @@
 </div>
 <div class="message">
     <?php
-    require_once('back-end/register-handler.php');
 
-if (isset($_GET['message']))
+require_once ('back-end/register-handler.php');
+
+if(isset($_GET['message']))
 {
-    echo '<p>' . $_GET['message'] . '</p>';
+    echo '<p>' . $_GET['message'] . '<p>';
 }
     ?>
 </div>
