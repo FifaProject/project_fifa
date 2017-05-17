@@ -17,8 +17,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     $passwordCheck = $_POST['password-confirm'];
 
 
-    $select = ("SELECT * FROM `tbl_user` WHERE `username` = '$username'");
-    $result = $database->query($select)->rowCount();
+    $stmt = $database->prepare("SELECT * FROM `tbl_user` WHERE `username` = :username");
+    $stmt->execute(array("username" => $username));
+    $result = $stmt->rowCount();
         if (($_POST['username'] != "") && ($_POST['password'] != ""))
         {
             if ($result != 1)
@@ -28,8 +29,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
                         if ($password == $passwordCheck)
                         {
                             $password = hash('ripemd160', $password);
-                            $sql = "INSERT INTO `tbl_user` (`user_id`, `username`, `password`) VALUES (NULL, '$username', '$password')";
-                            $database->query($sql);
+                            $stmt = $database->prepare(("INSERT INTO `tbl_user` (`username`, `password`) VALUES (:username, :password)"));
+                            $stmt ->execute(array("username" => $username, "password" => $password));
 
                             header("Location: ../register.php?message=$accountCreated");
                         }else
