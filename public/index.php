@@ -1,7 +1,6 @@
 <?php require(realpath(__DIR__) . '/templates/header.php'); ?>
 
-    <div class="main-content">
-
+    <div class="wrapper">
         <div class="pagetitle">
             <div class="container">
                 <img src="assets/img/logo2.png" alt="">
@@ -28,4 +27,5 @@
             </div>
         </div>
     </div>
+
 <?php require(realpath(__DIR__) . '/templates/footer.php');

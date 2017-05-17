@@ -131,3 +131,24 @@
     padding:40px 0 0 0;
 }
 
+/*==============================ADDRESULTS=======================================================*/
+
+.toprow {
+    padding:5px 0 5px 0;
+    margin: 10px 0 10px 0;
+    border:2px solid forestgreen;
+    background-color: rgba(56, 255, 105,0.2);
+    display: flex;
+    flex-direction:column;
+    flex-direction:center;
+}
+
+.middlerow {
+    width:80%;
+    display: flex;
+    flex-direction:row;
+    justify-content:center;
+}
+
+
+
