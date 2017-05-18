@@ -46,9 +46,16 @@
 }
 
 .navbar ul {
-    width:33%;
+    display: flex;
     list-style-type: none;
     overflow: hidden;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.navbar ul li{
+	display: block;
+	margin: 0;
 }
 
 /*====================HOMEPAGE================================*/
