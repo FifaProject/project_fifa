@@ -10,3 +10,17 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+<div class="pagetitle">
+    <div class="container">
+        <img src="assets/img/logo2.png" alt="">
+    </div>
+</div>
+<div class="navbar">
+    <ul>
+        <li><a href="index.php">Homepagina</a></li>
+        <li><a href="ViewResults.php">Resultaten bekijken</a></li>
+        <li><a href="ViewPoules.php">Poules bekijken</a></li>
+        <li><a href="ViewTeams.php">Teams bekijken</a></li>
+
+    </ul>
+</div>

@@ -1,21 +1,20 @@
-<?php require(realpath(__DIR__) . '/templates/header.php'); ?>
+<?php require(realpath(__DIR__) . '/templates/header.php');
+session_start();?>
 
     <div class="wrapper">
-        <div class="pagetitle">
-            <div class="container">
-                <img src="assets/img/logo2.png" alt="">
-            </div>
-        </div>
         <div class="banner">
-            <div class="navbar">
-                <ul>
-                    <li><a href="index.php">Homepagina</a></li>
-                    <li><a href="#">Teams bekijken</a></li>
-                    <li><a href="#">Gebruikers toevoegen</a></li>
-                    <li><a href="addteams.php">Teams toevoegen</a></li>
-                </ul>
-            </div>
             <div class="container">
+                <?php
+                    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true)
+                    {
+                        echo "Welcome ," . $_SESSION['username'] . "!";
+                    }
+                    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == !true)
+                    {
+                        echo "Not logged in";
+                        session_destroy();
+                    }
+                ?>
                 <img src="assets/img/banner-logo2.png" alt="">
                 <div class="loginscreen">
                         <form action="Login.php">
