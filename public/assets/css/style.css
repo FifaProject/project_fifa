@@ -46,16 +46,9 @@
 }
 
 .navbar ul {
-    display: flex;
+    width:33%;
     list-style-type: none;
     overflow: hidden;
-    justify-content: center;
-    flex-direction: row;
-}
-
-.navbar ul li{
-	display: block;
-	margin: 0;
 }
 
 /*====================HOMEPAGE================================*/
@@ -69,9 +62,6 @@
 
 .loginscreen input {
     border:2px solid lightgray;
-    -webkit-border-radius:;
-    -moz-border-radius:;
-    border-radius:10px 10px 10px 10px;
     margin:10px auto 10px auto;
     padding:5px 5px 5px 5px;
 }
@@ -86,9 +76,6 @@
     flex-direction:column;
     justify-content:space-between;
     border:2px solid lightgray;
-    -webkit-border-radius:;
-    -moz-border-radius:;
-    border-radius:15px 15px 15px 15px;
     background: rgba(130, 130,130,0.3);
 }
 
@@ -126,7 +113,7 @@
 .playercard {
     width:15%;
     float: left;
-    padding:10px 0 10px 0;
+    padding:10px 5px 10px 5px;
     margin:10px 11px 10px 9px;
     display: flex;
     flex-direction:column;
@@ -163,9 +150,5 @@
     justify-content:center;
 }
 
-/*======================ADD POULE====================*/
 
-.addpoule {
-    width:100%;
-}
 
