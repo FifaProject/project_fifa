@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     $stmt = $database->prepare("SELECT * FROM `tbl_user` WHERE `username` = :username");
     $stmt->execute(array("username" => $username));
     $result = $stmt->rowCount();
-        if (($_POST['username'] != "") && ($_POST['password'] != ""))
+        if (!empty($_POST['username']) && !empty($_POST['password']))
         {
             if ($result != 1)
             {
@@ -32,31 +32,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
                             $stmt = $database->prepare(("INSERT INTO `tbl_user` (`username`, `password`) VALUES (:username, :password)"));
                             $stmt ->execute(array("username" => $username, "password" => $password));
 
-                            header("Location: ../register.php?message=$accountCreated");
+                            header("Location: ../../../public/register.php?message=$accountCreated");
                         }else
                             {
 
-                                header("Location: ../register.php?message=$checkPw");
+                                header("Location: ../../../public/register.php?message=$checkPw");
                             }
                     }else
                         {
 
-                            header("Location: ../register.php?message=$invalidPassword");
+                            header("Location: ../../../public/register.php?message=$invalidPassword");
                         }
             }else
                 {
 
-                    header("Location: ../register.php?message=$inUse");
+                    header("Location: ../../../public/register.php?message=$inUse");
                 }
         }else
             {
 
-                header("Location: ../register.php?message=$isEmpty");
+                header("Location: ../../../public/register.php?message=$isEmpty");
 
             }
 }else
     {
 
-        //header("Location: ../register.php=$fatalError");
+        header("Location: ../../../public/register.php?message=$fatalError");
     }
 
