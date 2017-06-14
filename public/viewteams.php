@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -25,9 +26,10 @@
 <div class="navbar">
     <ul>
         <li><a href="index.php">Homepagina</a></li>
-        <li><a href="#">Teams bekijken</a></li>
-        <li><a href="#">Gebruikers toevoegen</a></li>
+        <li><a href="viewteams.php">Teams bekijken</a></li>
+        <li><a href="register.php">Gebruikers toevoegen</a></li>
         <li><a href="addteams.php">Teams toevoegen</a></li>
+        <li><a href="AddResults.php">Resultaten invoegen</a></li>
     </ul>
 </div>
 
@@ -45,7 +47,7 @@ while($rows = $stmt->fetch(PDO::FETCH_ASSOC)){
 
 
     echo '<ul class="list-group">';
-    echo '<li class="list-group-item">', "Team: " . $rows['name'] . "</li>";
+    echo '<li class="list-group-item">' . "Team: " . $rows['name'] . '</li>';
     echo '</ul>';
 
 }
