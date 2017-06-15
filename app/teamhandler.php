@@ -9,7 +9,8 @@ $pouleid = $_POST['poulenumber'];
 $filledinplayers = 0;
 
 if($teamname != "" && $pouleid != "") {
-    $sql = "SELECT id, poule_id, name FROM `tbl_teams` WHERE name = '$teamname' AND poule_id = '$pouleid'";
+    $sql = $database->prepare("SELECT id, poule_id, name FROM `tbl_teams` WHERE name = :teamname AND `poule_id` = :pouleid");
+    $sql->execute(array("teamname" => $teamname, "pouleid" => $pouleid));
     for ($i = 1; 7 > $i; $i++) {
         for ($x = 1; 7 > $x; $x++) {
             echo $x;
@@ -23,7 +24,7 @@ if($teamname != "" && $pouleid != "") {
             }
         }
     }
-    if($database->query($sql)->rowCount() == 0) {
+    if($sql->rowCount() == 0) {
         //check duplicates in fields
         for($i = 1; $i < 8; $i++) {
             //check eerste 4
@@ -49,8 +50,9 @@ if($teamname != "" && $pouleid != "") {
                 $playerid = $_POST['speler' . $i . '_id'];
                 $playerfname = $_POST['speler' . $i . '_fname'];
                 $playerlname = $_POST['speler' . $i . '_lname'];
-                $sql = "SELECT student_id from tbl_players where student_id = '$playerid'";
-                if($database->query($sql)->rowCount() != 0) {
+                $sql = $database->prepare("SELECT student_id from tbl_players where student_id = :playerid");
+                $sql->execute(array("playerid" => $playerid));
+                if($sql->rowCount() != 0) {
                     header("Location: ../public/addteams.php?Error=There is already a user with the student_id " . $playerid);
                     //cancel making team
                 }
@@ -61,18 +63,18 @@ if($teamname != "" && $pouleid != "") {
         if($filledinplayers < 4) {
             header("Location: ../public/addteams.php?Error=You need atleast 4 teammembers " . $filledinplayers);
         } else {
-            $sql = "INSERT INTO `tbl_teams` (`id`, `poule_id`, `name`, `created_at`, `deleted_at`) VALUES (NULL, '$pouleid', '$teamname', CURRENT_TIMESTAMP, NULL);";
-            $database->query($sql);
-            $sql = "SELECT id FROM `tbl_teams` WHERE name = '$teamname' AND poule_id = '$pouleid'";
-            $query = $database->prepare($sql);
-            $query->execute();
+            $sql = $database->prepare( "INSERT INTO `tbl_teams` (`id`, `poule_id`, `name`, `created_at`, `deleted_at`) VALUES (NULL, :pouleid, :teamname, CURRENT_TIMESTAMP, NULL);");
+            $sql->execute(array("pouleid" => $pouleid, "teamname" => $teamname));
+            $sql = $database->prepare( "SELECT id FROM `tbl_teams` WHERE name = :teamname AND poule_id = :pouleid");
+            $sql->execute(array("teamname" => $teamname, "poule_id" => $pouleid));
+
             $teamid = $query->fetch(PDO::FETCH_COLUMN);
             for($i = 1; $i < ($filledinplayers + 1); $i++) {
                 $playerid = $_POST['speler' . $i . '_id'];
                 $playerfname = $_POST['speler' . $i . '_fname'];
                 $playerlname = $_POST['speler' . $i . '_lname'];
-                $sql = "INSERT INTO `tbl_players` (`id`, `student_id`, `team_id`, `poule_id`, `first_name`, `last_name`, `created_at`, `deleted_at`) VALUES (NULL, '$playerid', '$teamid', '0', '$playerfname', '$playerlname', CURRENT_TIMESTAMP, NULL)";
-                $database->query($sql);
+                $sql = $database->prepare("INSERT INTO `tbl_players` (`id`, `student_id`, `team_id`, `poule_id`, `first_name`, `last_name`, `created_at`, `deleted_at`) VALUES (NULL, :playerid, :teamid, '0', :playerfname, :playerlname, CURRENT_TIMESTAMP, NULL)");
+                $sql->execute(array("playerid" => $playerid, "teamid" => $teamid, "playerfname" => $playerfname, "playerlname" => $playerlname));
             }
             header("Location: ../public/addteams.php?Error=Team has been created!" . $filledinplayers);
             //stop looking for more filled in players
