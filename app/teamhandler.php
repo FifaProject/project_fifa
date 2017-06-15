@@ -25,7 +25,7 @@ if($teamname != "" && $pouleid != "") {
     }
     if($database->query($sql)->rowCount() == 0) {
         //check duplicates in fields
-        for($i = 1; $i < 7; $i++) {
+        for($i = 1; $i < 8; $i++) {
             //check eerste 4
             if($i < 4) {
                 if($_POST['speler' . $i . '_id'] != "" && $_POST['speler' . $i . '_fname'] != "" && $_POST['speler' . $i . '_lname'] != "") {
@@ -59,7 +59,7 @@ if($teamname != "" && $pouleid != "") {
             }
         }
         if($filledinplayers < 4) {
-            header("Location: ../public/addteams.php?Error=You need atleast 4 teammembers");
+            header("Location: ../public/addteams.php?Error=You need atleast 4 teammembers " . $filledinplayers);
         } else {
             $sql = "INSERT INTO `tbl_teams` (`id`, `poule_id`, `name`, `created_at`, `deleted_at`) VALUES (NULL, '$pouleid', '$teamname', CURRENT_TIMESTAMP, NULL);";
             $database->query($sql);
@@ -71,7 +71,7 @@ if($teamname != "" && $pouleid != "") {
                 $playerid = $_POST['speler' . $i . '_id'];
                 $playerfname = $_POST['speler' . $i . '_fname'];
                 $playerlname = $_POST['speler' . $i . '_lname'];
-                $sql = "INSERT INTO `tbl_players` (`id`, `student_id`, `team_id`, `first_name`, `last_name`, `created_at`, `deleted_at`) VALUES (NULL, '$playerid', '$teamid', '$playerfname', '$playerlname', CURRENT_TIMESTAMP, NULL)";
+                $sql = "INSERT INTO `tbl_players` (`id`, `student_id`, `team_id`, `poule_id`, `first_name`, `last_name`, `created_at`, `deleted_at`) VALUES (NULL, '$playerid', '$teamid', '0', '$playerfname', '$playerlname', CURRENT_TIMESTAMP, NULL)";
                 $database->query($sql);
             }
             header("Location: ../public/addteams.php?Error=Team has been created!" . $filledinplayers);
