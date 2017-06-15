@@ -1,6 +1,10 @@
 <?php
 require(realpath(__DIR__) . '/templates/header.php');
 session_start();
+if(!isset($_SESSION['username']))
+{
+    header('Location: index.php');
+}
 $connect = mysqli_connect("localhost", "root", "", "project_fifa");
 $query ="SELECT * FROM tbl_matches ORDER BY id";
 $result = mysqli_query($connect, $query);

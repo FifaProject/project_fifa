@@ -1,5 +1,10 @@
 <?php require(realpath(__DIR__) . '/templates/header.php');
-session_start(); ?>
+session_start();
+if(!isset($_SESSION['username']))
+{
+    header('Location: index.php');
+}
+?>
 
 <div class="container">
     <div class="head">

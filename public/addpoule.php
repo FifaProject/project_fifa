@@ -1,6 +1,10 @@
 <?php require 'templates/header.php';
 require_once ("../app/database.php");
 session_start();
+if(!isset($_SESSION['username']))
+{
+    header('Location: index.php');
+}
 ?>
 
 <div class="container">
