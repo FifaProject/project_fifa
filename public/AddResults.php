@@ -14,9 +14,6 @@ session_start(); ?>
                 <li><a href="viewteams.php">Teams bekijken</a></li>
                 <!--                    Create View Matches-->
                 <li><a href="#">Wedstrijden bekijken</a></li>
-                <!--                    Create View Poules-->
-                <li><a href="#">Poules bekijken</a></li>
-
                 <?php
                 if (isset($_SESSION['username']))
                 {
@@ -110,7 +107,7 @@ session_start(); ?>
                 if ($result == 1)
                 {
                     ?>
-                    <form action="../app/results-handler.php" method="post">
+                    <form action="../app/resultshandler.php" method="post">
 
                         <input type="hidden" name="matchid" value=" <?php echo $matchId ?>">
 

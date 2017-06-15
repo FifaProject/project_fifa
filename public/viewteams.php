@@ -15,9 +15,6 @@ session_start(); ?>
                 <li><a href="viewteams.php">Teams bekijken</a></li>
                 <!--                    Create View Matches-->
                 <li><a href="#">Wedstrijden bekijken</a></li>
-                <!--                    Create View Poules-->
-                <li><a href="#">Poules bekijken</a></li>
-
                 <?php
                 if (isset($_SESSION['username']))
                 {
