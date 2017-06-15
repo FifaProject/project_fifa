@@ -175,7 +175,6 @@
     background-color: rgba(56, 255, 105,0.2);
     display: flex;
     flex-direction:column;
-    flex-direction:center;
 }
 
 .middlerow {
@@ -232,4 +231,14 @@ td{
 
 .view{
     margin-top: 30px;
+}
+
+.teams li{
+    font-weight: bolder;
+    list-style-type: none;
+    margin: 10px 0;
+}
+
+.players li{
+    list-style-type: none;
 }
