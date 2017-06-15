@@ -20,8 +20,7 @@ $resultthree = mysqli_query($connect, $querythree);
                 <ul>
                     <li><a href="index.php">Home</a></li>
                     <li><a href="viewteams.php">Teams bekijken</a></li>
-                    <!--                    Create View Matches-->
-                    <li><a href="#">Wedstrijden bekijken</a></li>
+                    <li><a href="viewmatches.php">Wedstrijden bekijken</a></li>
                     <?php
                     if (isset($_SESSION['username']))
                     {

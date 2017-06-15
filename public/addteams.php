@@ -12,8 +12,7 @@ session_start(); ?>
             <ul>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="viewteams.php">Teams bekijken</a></li>
-                <!--                    Create View Matches-->
-                <li><a href="#">Wedstrijden bekijken</a></li>
+                <li><a href="viewmatches.php">Wedstrijden bekijken</a></li>
                 <?php
                 if (isset($_SESSION['username']))
                 {
@@ -70,7 +69,7 @@ session_start(); ?>
                     <div class="playercard">
                         <h2>Speler 3</h2>
                         <label for="speler3_id">Studentnummer : </label><input type="text" id="speler3_id" name="speler3_id">
-                        <label for="speler3_fname">Voornaam : </label><input type="text" id="speler3_fname" name="speler4_fname">
+                        <label for="speler3_fname">Voornaam : </label><input type="text" id="speler3_fname" name="speler3_fname">
                         <label for="speler3_lname">Achternaam : </label><input type="text" id="speler3_lname" name="speler3_lname">
                     </div>
                     <div class="playercard">
