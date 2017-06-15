@@ -8,9 +8,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     $password = $_POST['password'];
 
     $password = hash('ripemd160', $password);
-    $sql = "SELECT * FROM `tbl_users` WHERE `username` = '$username' && `password` = '$password'";
+    $sql = $database->prepare(("SELECT * FROM `tbl_users` WHERE `username` = :username && `password` = :password"));
+    $sql->execute(array("username" => $username, "password" =>$password));
 
-    if($database->query($sql)->rowCount() == 1) {
+
+    if($sql->rowCount() == 1) {
         session_start();
         $_SESSION['username'] = $username;
         header('location: ../public/index.php');
@@ -28,4 +30,3 @@ else{
     header("location: ../public/index.php");
 }
 
-?>
