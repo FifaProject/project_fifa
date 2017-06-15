@@ -152,7 +152,6 @@ $resultthree = mysqli_query($connect, $querythree);
                         <th width="5%">ID</th>
                         <th width="5%">Student ID</th>
                         <th width="5%">Team ID</th>
-                        <th width="5%">Poule ID</th>
                         <th width="5%">First Name</th>
                         <th width="5%">Last Name</th>
                         <th width="10%">Created at</th>
@@ -166,7 +165,6 @@ $resultthree = mysqli_query($connect, $querythree);
                             <td><?php echo $rowthree["id"]; ?></td>
                             <td><?php echo $rowthree["student_id"]; ?></td>
                             <td><?php echo $rowthree["team_id"]; ?></td>
-                            <td><?php echo $rowthree["poule_id"]; ?></td>
                             <td><?php echo $rowthree["first_name"]; ?></td>
                             <td><?php echo $rowthree["last_name"]; ?></td>
                             <td><?php echo $rowthree["created_at"]; ?></td>
