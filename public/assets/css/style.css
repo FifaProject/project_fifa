@@ -1,94 +1,124 @@
 
-/* MAIN FIXES */
+/*!* MAIN FIXES *!*/
 
 * {
     font-size: 16px;
     margin:0 auto;
     padding: 0;
-    text-align:center;
-    font-family:Calibri;
+    text-align: center;
+    font-family: Calibri;
 }
 
-.container {
-    width:80%;
+.head{
+    background-color: #2F4F4F;
 }
-/* ======================NAVBAR&PAGETITLE=================================*/
 
-.pagetitle {
+/*!* ======================NAVBAR&PAGETITLE=================================*!*/
+
+
+.head{
     width: 100%;
-    height: 100%;
-    background-color: #2F4F4F;
-    color: white;
+
 }
 
-.navbar {
-    background-color: #2F4F4F;
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    overflow: hidden;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #D3D3D3;
+}
+
+.navbar a:Hover {
+    color: #ffffff;
 }
 
 .navbar li a {
     display: block;
-    color: white;
     text-align: center;
     padding: 14px 5px;
-    margin:3px 10px;
+    margin: 0 5px;
     text-decoration: none;
-    font-size: 1em;
+    font-weight: 100;
+    letter-spacing: 1px;
 }
-
-.navbar a {
-    font-weight:100;
-    letter-spacing:1px;
-}
-
-.navbar a:Hover {
-    color:lightgray;
-}
-
-.navbar ul {
+.userbar ul{
+    padding-top: 10px;
+    padding-bottom: 5px;
+    display: flex;
     list-style-type: none;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-}
-.navbar ul li{
-    display: inline-block;
-    margin: 0;
+    justify-content: flex-end;
+    flex-direction: row;
 }
 
-/*====================HOMEPAGE================================*/
-.banner {
+.userbar ul li {
+    margin: 0;
+    margin-right: 40px;
+}
+
+.userbar h3{
+    color: #FFFFFF;
+    font-size: 22px;
+    margin-right: 47px;
+}
+
+.userbar a{
+    text-decoration: none;
+    color: #D3D3D3;
+    background-color: #2E3A38;
+    padding: 5px 10px;
+    border: solid 1px #083C37;
+    border-radius: 10px;
+}
+
+.userbar a:hover{
+    color: #ffffff;
+}
+
+/*!*====================HOMEPAGE================================*!*/
+.logincontent {
     background-image: url("../img/bannerbg-nocorr.jpg");
-    -webkit-background-size: inherit;
-    background-size: 100%;
-    background-repeat: no-repeat ;
-    padding-bottom:221px;
+    background-repeat: no-repeat;
+    padding-top: 25px;
+    padding-bottom: 510px;
+}
+
+.loginscreen form {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
 }
 
 .loginscreen input {
     border:2px solid lightgray;
     margin:10px auto 10px auto;
     padding:5px 5px 5px 5px;
+    width: 20%;
+    min-width: 200px;
+    border-radius: 10px;
 }
 
-.banner img {
-    padding:150px 0px 40px 0;
+.loginscreen input[type=submit] {
+    width: 10%;
+    border-radius: 50px;
+    background-color: #2a6495;
+    border: solid 1px #002E95;
+    min-width: 100px;
 }
 
-.loginscreen form {
-    width:100%;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-    border:2px solid lightgray;
-    background: rgba(130, 130,130,0.3);
+.message p{
+    font-size: 26px;
 }
 
-.loginbutton {
-    width:10%
-}
-
-/*=================ADDTEAMS==========================*/
+/*!*=================ADDTEAMS==========================*!*/
 
 .addteams-leftcol {
     width:100%;
@@ -118,7 +148,7 @@
 .playercard {
     width:15%;
     float: left;
-    padding:10px 5px 10px 5px;
+    padding:10px 0 10px 0;
     margin:10px 11px 10px 9px;
     display: flex;
     flex-direction:column;
@@ -136,7 +166,7 @@
     padding:40px 0 0 0;
 }
 
-/*==============================ADDRESULTS=======================================================*/
+/*!*==============================ADDRESULTS=======================================================*!*/
 
 .toprow {
     padding:5px 0 5px 0;
@@ -144,8 +174,8 @@
     border:2px solid forestgreen;
     background-color: rgba(56, 255, 105,0.2);
     display: flex;
-    flex-direction: column;
-
+    flex-direction:column;
+    flex-direction:center;
 }
 
 .middlerow {
@@ -154,26 +184,52 @@
     flex-direction:row;
     justify-content:center;
 }
-
-
-
-
-
-/*===============================================TEAMVIEW=================================================*/
-
-.list-style ul li{
-    font-weight: bolder;
+/*!*==============================EXPORT========================*!*/
+.exportcontent {
+    width: 1080px;
+    margin-top: 10px;
+    padding-bottom: 50px;
 }
 
-/*===============================================ADDMATCHES===============================================*/
-
-.teams li {
-    font-weight: bolder;
+.exportcontent .btn {
     margin: 10px 0;
-    list-style-type: none;
-    text-decoration: none;
+    padding: 10px 5px;
+    background-color: #00cc00;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
 }
 
-.players li{
-    list-style-type: none;
+.exportcontent p{
+    font-size: 19px;
+    margin: 10px 0;
+}
+.exportcontent h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+.exportcontent h2, .exportcontent h3{
+    margin-top: 10px;
+    font-size: 24px;
+}
+table {
+    border-top: 1px solid gray;
+    margin-bottom: 20px;
+}
+
+th{
+    border-right: 1px solid gray;
+    border-left: 1px solid gray;
+    border-bottom: 1px solid gray;
+
+}
+td{
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
+    border-left: 1px solid lightgrey;
+}
+
+.view{
+    margin-top: 30px;
 }

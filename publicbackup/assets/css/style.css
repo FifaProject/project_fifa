@@ -1,0 +1,179 @@
+
+/* MAIN FIXES */
+
+* {
+    font-size: 16px;
+    margin:0 auto;
+    padding: 0;
+    text-align:center;
+    font-family:Calibri;
+}
+
+.container {
+    width:80%;
+}
+/* ======================NAVBAR&PAGETITLE=================================*/
+
+.pagetitle {
+    width: 100%;
+    height: 100%;
+    background-color: #2F4F4F;
+    color: white;
+}
+
+.navbar {
+    background-color: #2F4F4F;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 5px;
+    margin:3px 10px;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.navbar a {
+    font-weight:100;
+    letter-spacing:1px;
+}
+
+.navbar a:Hover {
+    color:lightgray;
+}
+
+.navbar ul {
+    list-style-type: none;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+.navbar ul li{
+    display: inline-block;
+    margin: 0;
+}
+
+/*====================HOMEPAGE================================*/
+.banner {
+    background-image: url("../img/bannerbg-nocorr.jpg");
+    -webkit-background-size: inherit;
+    background-size: 100%;
+    background-repeat: no-repeat ;
+    padding-bottom:221px;
+}
+
+.loginscreen input {
+    border:2px solid lightgray;
+    margin:10px auto 10px auto;
+    padding:5px 5px 5px 5px;
+}
+
+.banner img {
+    padding:150px 0px 40px 0;
+}
+
+.loginscreen form {
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    border:2px solid lightgray;
+    background: rgba(130, 130,130,0.3);
+}
+
+.loginbutton {
+    width:10%
+}
+
+/*=================ADDTEAMS==========================*/
+
+.addteams-leftcol {
+    width:100%;
+    float: left;
+    padding:10px 0 10px 0;
+    margin:10px 0 10px 0;
+    border:2px solid forestgreen;
+    background-color: rgba(56, 255, 105,0.2);
+}
+
+.playercards-toprow {
+    width:100%;
+    display: flex;
+    flex-direction:row;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.playercards-bottomrow {
+    width:100%;
+    display: flex;
+    flex-direction:row;
+    overflow: hidden;
+    justify-content:center;
+}
+
+.playercard {
+    width:15%;
+    float: left;
+    padding:10px 5px 10px 5px;
+    margin:10px 11px 10px 9px;
+    display: flex;
+    flex-direction:column;
+    justify-content:space-between;
+    border:2px solid forestgreen;
+    background-color: rgba(56, 255, 105,0.2);
+}
+
+#sendteams{
+    padding:8px 5px 8px 5px;
+    border: 2px solid lightslategray;
+}
+
+.playercard form {
+    padding:40px 0 0 0;
+}
+
+/*==============================ADDRESULTS=======================================================*/
+
+.toprow {
+    padding:5px 0 5px 0;
+    margin: 10px 0 10px 0;
+    border:2px solid forestgreen;
+    background-color: rgba(56, 255, 105,0.2);
+    display: flex;
+    flex-direction: column;
+
+}
+
+.middlerow {
+    width:80%;
+    display: flex;
+    flex-direction:row;
+    justify-content:center;
+}
+
+
+
+
+
+/*===============================================TEAMVIEW=================================================*/
+
+.list-style ul li{
+    font-weight: bolder;
+}
+
+/*===============================================ADDMATCHES===============================================*/
+
+.teams li {
+    font-weight: bolder;
+    margin: 10px 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.players li{
+    list-style-type: none;
+}
