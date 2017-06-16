@@ -242,3 +242,7 @@ td{
 .players li{
     list-style-type: none;
 }
+
+.link p{
+    text-decoration: none;
+}

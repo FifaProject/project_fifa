@@ -2,7 +2,7 @@
 require '../app/database.php';
 session_start(); ?>
 
-<div class="container">
+< class="container">
     <div class="head">
         <div class="title">
             <a href="index.php">
@@ -44,7 +44,7 @@ session_start(); ?>
         }
         ?>
     </div>
-    <div class="content">
+    <a class="content">
         <?php
 
         $sql = "SELECT * FROM tbl_players INNER JOIN tbl_teams ON tbl_players.team_id = tbl_teams.id";
@@ -70,6 +70,13 @@ session_start(); ?>
             }
             ?>
             </table>
+        </div>
+        <div class="link">
+            <a href="CreateGames.php"<p>Klik hier om wedstrijden aan te maken.</a></p>
+<form action="CreateGames.php" method="get">
+    <label for="poule_id">Poule id</label><input type="number" name="poule_id" id="poule_id" placeholder="Poule id" required>
+    <input type="submit" value="verzenden">
+</form>
         </div>
     </div>
 </div>
