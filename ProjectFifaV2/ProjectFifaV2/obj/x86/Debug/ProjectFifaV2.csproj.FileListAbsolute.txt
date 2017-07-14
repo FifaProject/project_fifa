@@ -54,3 +54,6 @@ C:\Users\Iwan\Desktop\School\Git\project_fifa\ProjectFifaV2\ProjectFifaV2\obj\x8
 C:\Users\Iwan\Desktop\School\Git\project_fifa\ProjectFifaV2\ProjectFifaV2\obj\x86\Debug\ProjectFifaV2.frmRanking.resources
 C:\Users\Iwan\Desktop\School\Git\project_fifa\ProjectFifaV2\ProjectFifaV2\obj\x86\Debug\ProjectFifaV2.Properties.Resources.resources
 C:\Users\Iwan\Desktop\School\Git\project_fifa\ProjectFifaV2\ProjectFifaV2\obj\x86\Debug\ProjectFifaV2.csproj.GenerateResource.Cache
+C:\Users\mitch\Desktop\School\Hoofd_Projecten\Fifa\project_fifa\ProjectFifaV2\ProjectFifaV2\bin\Debug\ProjectFifaV2.exe.config
+C:\Users\mitch\Desktop\School\Hoofd_Projecten\Fifa\project_fifa\ProjectFifaV2\ProjectFifaV2\obj\x86\Debug\ProjectFifaV2.exe
+C:\Users\mitch\Desktop\School\Hoofd_Projecten\Fifa\project_fifa\ProjectFifaV2\ProjectFifaV2\obj\x86\Debug\ProjectFifaV2.pdb
